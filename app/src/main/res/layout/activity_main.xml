@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtTelefono"
                 android:text="@string/txtTelefono"
-                android:layout_below="@+id/txtPaises"/>
+                android:layout_below="@+id/sPaises"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,6 +71,9 @@
                 android:id="@+id/txtPaises"
                 android:text="@string/txtPais"
                 android:layout_below="@+id/rGroup"/>
+
+
+            <!--campos editables-->
 
             <EditText
                 android:id="@+id/eTNombres"
@@ -132,14 +135,15 @@
                 android:id="@+id/sHobbies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtHobbies">
+                android:layout_below="@+id/txtHobbies"
+                >
 
             </Spinner>
             <Spinner
                 android:id="@+id/sPaises"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtHobbies">
+                android:layout_below="@+id/txtPaises">
 
             </Spinner>
 
