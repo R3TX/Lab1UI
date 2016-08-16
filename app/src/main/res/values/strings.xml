@@ -3,16 +3,17 @@
     <string name="btnText">Mostrar</string>
     <string name="rF">Femenino</string>
     <string name="rM">Masculino</string>
-    <string name="txtName">Nombre:</string>
+    <string name="txtName">Nombre*</string>
     <string name="txtApellido">Apellidos:</string>
-    <string name="txtTelefono">Telefono: </string>
+    <string name="txtTelefono">Telefono* </string>
     <string name="txtSexo">Sexo</string>
     <string name="txtDireccion">Dirección: </string>
-    <string name="txtEmail">Email:</string>
-    <string name="txtNacimiento">Fecha de nacimiento</string>
-    <string name="txtPais">Pais</string>
+    <string name="txtEmail">Email*</string>
+    <string name="txtNacimiento">Fecha de Nacimiento*</string>
+    <string name="txtPais">Pais*</string>
     <string name="txtHobbies">Hobbies:</string>
     <string name="cBFavorito">Favorito</string>
+    <string name="btnDate">Fecha</string>
     <string-array name="paises">
         <item>Argentina</item>
         <item>Republica Dominicana</item>

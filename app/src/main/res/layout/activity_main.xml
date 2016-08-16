@@ -70,6 +70,18 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtPaises"
                 android:text="@string/txtPais"
+                android:layout_below="@+id/btnSetDate"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDateLabel"
+                android:text="@string/txtNacimiento"
+                android:layout_below="@+id/rGroup"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDate"
+                android:text=""
                 android:layout_below="@+id/rGroup"/>
 
 
@@ -152,6 +164,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cBFavorito"
                 android:layout_below="@+id/sHobbies"/>
+            <Button
+                android:id="@+id/btnSetDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setDate"
+                android:text="@string/btnDate"
+                android:layout_alignRight="@+id/txtDate"
+                android:layout_below="@id/rGroup"/>
 
 
         </RelativeLayout>
