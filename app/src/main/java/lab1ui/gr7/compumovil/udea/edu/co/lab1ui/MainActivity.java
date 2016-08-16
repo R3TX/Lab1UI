@@ -6,8 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,16 +31,68 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final String pais;
+        String hobie;
+
+
         Spinner spinnerPaises = (Spinner) findViewById(R.id.sPaises);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.paises, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        AdapterView.OnItemSelectedListener onItemSelectedListener= new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+               pais = parent.getItemAtPosition(position).toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        };
+        AdapterView.OnItemSelectedListener oisl= new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hobie = parent.getItemAtPosition(position).toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        };
+        Toast.makeText(this, hobie,Toast.LENGTH_SHORT).show();
+        spinnerPaises.setOnItemSelectedListener(onItemSelectedListener);
         spinnerPaises.setAdapter(adapter);
         Spinner spinnerHobbies = (Spinner) findViewById(R.id.sHobbies);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.hobbies, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerHobbies.setAdapter(adapter2);
+        spinnerHobbies.setOnItemSelectedListener( onItemSelectedListener);
+
+
+        EditText nombre, telefono, email, apellidos, direccion;
+        TextView fNacimiento;
+        CheckBox favorito= (CheckBox)  findViewById(R.id.cHFavorito);
+        RadioGroup radioGroup = ( RadioGroup) findViewById(R.id.rGroup);
+
+        nombre = (EditText) findViewById(R.id.eTNombres);
+        apellidos = (EditText) findViewById(R.id.eTapellidos);
+        direccion = (EditText) findViewById(R.id.eTDireccion);
+        fNacimiento = (TextView) findViewById(R.id.txtDate);
+        telefono = (EditText) findViewById(R.id.eTTelefono);
+        email = (EditText) findViewById(R.id.eTEmail);
+        Button mostrar= (Button) findViewById(R.id.btnMostrar);
+
+      //  mostrar.setOnClickListener();
+
+
 
         dateView = (TextView) findViewById(R.id.txtDate);
         calendar = Calendar.getInstance();
@@ -76,11 +133,11 @@ public class MainActivity extends AppCompatActivity {
         dateView.setText(new StringBuilder().append(day).append("/")
                 .append(month).append("/").append(year));
     }
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
+    }*/
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    <string name="app_name">Lab1UI</string>
+    <string name="btnText">Show</string>
+    <string name="rF">Female</string>
+    <string name="rM">Male</string>
+    <string name="txtName">Name*</string>
+    <string name="txtApellido">Last Name</string>
+    <string name="txtTelefono">Telephone*</string>
+    <string name="txtSexo">Gender</string>
+    <string name="txtDireccion">Addres</string>
+    <string name="txtEmail">Email*</string>
+    <string name="txtNacimiento">Birthday*</string>
+    <string name="txtPais">Country*</string>
+    <string name="txtHobbies">Hobbies</string>
+    <string name="cBFavorito">Favourite</string>
+    <string name="btnDate">Date</string>
+    <string-array name="paises">
+        <item>Argentina</item>
+        <item>Republica Dominicana</item>
+        <item>Peru</item>
+        <item>Chile</item>
+        <item>Ecuador</item>
+        <item>Mexico</item>
+        <item>Brazil</item>
+        <item>Costa Rica</item>
+        <item>Uruguay</item>
+        <item>Guatemala</item>
+        <item>Panama</item>
+        <item>Colombia</item>
+        <item>Venezuela</item>
+        <item>El Salvador</item>
+        <item>Nicaragua</item>
+        <item>Bolivia</item>
+        <item>Cuba</item>
+        <item>Guayana Francesa</item>
+        <item>Haiti</item>
+        <item>Paraguay</item>
+        <item>Surinam</item>
+        <item>Granada</item>
+        <item>Jamaica</item>
+
+    </string-array>
+
+    <string-array name="hobbies">
+    <item>Futbol</item>
+    <item>Musica</item>
+    <item>Ciclismo</item>
+    <item>Deportes Extremos</item>
+    <item>Leer</item>
+    <item>Shopping</item>
+    <item>Acampar</item>
+    <item>Cine</item>
+    <item>Programar</item>
+    </string-array>
+</resources>

@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtDate"
                 android:text=""
-                android:layout_below="@+id/rGroup"/>
+                android:layout_below="@+id/txtDateLabel"/>
 
 
             <!--campos editables-->
@@ -160,6 +160,7 @@
             </Spinner>
 
             <CheckBox
+                android:id="@+id/cHFavorito"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/cBFavorito"
