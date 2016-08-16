@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Lab1UI</string>
+    <string name="btnText">Mostrar</string>
+    <string name="rF">Femenino</string>
+    <string name="rM">Masculino</string>
+    <string name="txtName">Nombre:</string>
+    <string name="txtApellido">Apellidos:</string>
+    <string name="txtTelefono">Telefono: </string>
+    <string name="txtSexo">Sexo</string>
+    <string name="txtDireccion">Dirección: </string>
+    <string name="txtEmail">Email:</string>
+    <string name="txtNacimiento">Fecha de nacimiento</string>
+    <string name="txtPais">Pais</string>
+    <string name="txtHobbies">Hobbies:</string>
+    <string name="cBFavorito">Favorito</string>
+    <string-array name="paises">
+        <item>Argentina</item>
+        <item>Republica Dominicana</item>
+        <item>Peru</item>
+        <item>Chile</item>
+        <item>Ecuador</item>
+        <item>Mexico</item>
+        <item>Brazil</item>
+        <item>Costa Rica</item>
+        <item>Uruguay</item>
+        <item>Guatemala</item>
+        <item>Panama</item>
+        <item>Colombia</item>
+        <item>Venezuela</item>
+        <item>El Salvador</item>
+        <item>Nicaragua</item>
+        <item>Bolivia</item>
+        <item>Cuba</item>
+        <item>Guayana Francesa</item>
+        <item>Haiti</item>
+        <item>Paraguay</item>
+        <item>Surinam</item>
+        <item>Granada</item>
+        <item>Jamaica</item>
+
+    </string-array> <string-array name="hobbies">
+    <item>Futbol</item>
+    <item>Musica</item>
+    <item>Ciclismo</item>
+    <item>Deportes Extremos</item>
+    <item>Leer</item>
+    <item>Shopping</item>
+    <item>Acampar</item>
+    <item>Cine</item>
+    <item>Programar</item>
+
+
+
+</string-array>
+
+
+
+</resources>
