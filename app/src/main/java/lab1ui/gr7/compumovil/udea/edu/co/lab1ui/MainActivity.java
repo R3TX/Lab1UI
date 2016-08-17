@@ -25,56 +25,33 @@ public class MainActivity extends AppCompatActivity {
     private Calendar calendar;
     private TextView dateView;
     private int year, month, day;
-
+    AdapterItem aihobies ;
+    AdapterItem aipaises;
+    String pais;
+    String hobie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final String pais;
-        String hobie;
-
 
         Spinner spinnerPaises = (Spinner) findViewById(R.id.sPaises);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.paises, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        AdapterView.OnItemSelectedListener onItemSelectedListener= new AdapterView.OnItemSelectedListener() {
+         aihobies = new AdapterItem();
+        aipaises = new AdapterItem();
 
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               pais = parent.getItemAtPosition(position).toString();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        };
-        AdapterView.OnItemSelectedListener oisl= new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                hobie = parent.getItemAtPosition(position).toString();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        };
-        Toast.makeText(this, hobie,Toast.LENGTH_SHORT).show();
-        spinnerPaises.setOnItemSelectedListener(onItemSelectedListener);
+        spinnerPaises.setOnItemSelectedListener(aipaises);
         spinnerPaises.setAdapter(adapter);
         Spinner spinnerHobbies = (Spinner) findViewById(R.id.sHobbies);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.hobbies, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerHobbies.setAdapter(adapter2);
-        spinnerHobbies.setOnItemSelectedListener( onItemSelectedListener);
+        spinnerHobbies.setOnItemSelectedListener( aihobies);
+
 
 
         EditText nombre, telefono, email, apellidos, direccion;
@@ -89,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
         telefono = (EditText) findViewById(R.id.eTTelefono);
         email = (EditText) findViewById(R.id.eTEmail);
         Button mostrar= (Button) findViewById(R.id.btnMostrar);
+
+        mostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pais=aipaises.getStringSelected();
+                hobie=aihobies.getStringSelected();
+
+                Toast.makeText(MainActivity.this, pais,Toast.LENGTH_SHORT).show();
+            }
+        });
 
       //  mostrar.setOnClickListener();
 
@@ -107,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
         showDialog(999);
         Toast.makeText(getApplicationContext(), "ca", Toast.LENGTH_SHORT)
                 .show();
+    }
+
+
+    public void mostrar(){
+        pais=aipaises.getStringSelected();
+        hobie=aihobies.getStringSelected();
+
+        Toast.makeText(this, pais,Toast.LENGTH_SHORT).show();
     }
 
     @Override
