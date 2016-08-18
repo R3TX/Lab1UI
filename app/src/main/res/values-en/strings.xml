@@ -14,6 +14,7 @@
     <string name="txtHobbies">Hobbies</string>
     <string name="cBFavorito">Favourite</string>
     <string name="btnDate">Date</string>
+    <string name="warningMust">Fields with "*" are mandatory</string>
     <string-array name="paises">
         <item>Argentina</item>
         <item>Republica Dominicana</item>
@@ -52,4 +53,5 @@
     <item>Cine</item>
     <item>Programar</item>
     </string-array>
+
 </resources>

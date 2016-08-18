@@ -8,7 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="lab1ui.gr7.compumovil.udea.edu.co.lab1ui.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/principal">
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,6 +86,7 @@
                 android:layout_below="@+id/txtDateLabel"/>
 
 
+
             <!--campos editables-->
 
             <EditText
@@ -135,12 +137,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rF"
                     android:checked="true"
+                    android:onClick="onRadioButtonClicked"
                     />
                 <RadioButton
                     android:id="@+id/rMasculino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rM"
+                    android:onClick="onRadioButtonClicked"
                     />
             </RadioGroup>
             <Spinner
